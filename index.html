@@ -2,12 +2,9 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>𝐁𝐧 𝐂𝐚𝐯𝐞</title>
+<title>Bn Cave</title>
 
-<!-- Fonte elegante -->
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-
-<!-- Ícones -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 <script src="https://kit.fontawesome.com/a2e0e6ad65.js" crossorigin="anonymous"></script>
 
 <style>
@@ -21,76 +18,84 @@
 body {
   min-height: 100vh;
   background:
-    linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.95)),
-    url('bg.jpg') center / cover no-repeat fixed;
+    linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.95)),
+    url('bg.jpg') center / cover no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #f1f1f1;
+  color: #fff;
 }
 
 .container {
   width: 100%;
-  max-width: 420px;
-  padding: 40px 20px;
+  max-width: 460px;
+  padding: 50px 22px;
   text-align: center;
 }
 
-/* Nome */
+/* Nome do site */
 .name {
-  font-size: 28px;
-  font-weight: 600;
-  letter-spacing: 3px;
-  margin-bottom: 35px;
-  text-shadow: 0 0 18px rgba(160,160,255,0.25);
+  font-size: 38px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  margin-bottom: 45px;
+  text-shadow: 0 0 25px rgba(140,140,255,0.35);
 }
 
 /* Links */
 .links {
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 24px;
 }
 
 .link {
   text-decoration: none;
-  color: #f1f1f1;
-  background: rgba(12,12,18,0.92);
-  border: 1px solid rgba(255,255,255,0.06);
-  border-radius: 18px;
-  padding: 18px 22px;
+  background: rgba(10,10,16,0.95);
+  border-radius: 22px;
+  padding: 26px;
   display: flex;
   align-items: center;
-  gap: 18px;
-  transition: all 0.35s ease;
-  backdrop-filter: blur(8px);
+  gap: 22px;
+  transition: 0.35s;
+  border: 1px solid rgba(255,255,255,0.05);
 }
 
-/* Ícones grandes */
 .link i {
-  font-size: 26px;
-  color: #a6a6ff;
-  min-width: 30px;
+  font-size: 34px;
+  color: #9fa8ff;
+  min-width: 36px;
 }
 
-/* Texto */
-.link span {
-  font-size: 16px;
+/* Textos */
+.text {
+  text-align: left;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 600;
   letter-spacing: 1px;
-  font-weight: 400;
 }
 
-/* Hover elegante */
+.subtitle {
+  font-size: 17px;
+  margin-top: 6px;
+  color: #b7baff;
+  letter-spacing: 1px;
+}
+
+/* Hover */
 .link:hover {
-  transform: translateY(-4px);
-  border-color: rgba(166,166,255,0.6);
-  box-shadow: 0 0 30px rgba(166,166,255,0.25);
+  transform: translateY(-6px);
+  box-shadow: 0 0 35px rgba(120,120,255,0.35);
+  border-color: rgba(120,120,255,0.6);
 }
 
-/* Rodapé discreto */
+/* Rodapé */
 footer {
-  margin-top: 40px;
-  font-size: 11px;
+  margin-top: 45px;
+  font-size: 12px;
   opacity: 0.25;
   letter-spacing: 2px;
 }
@@ -101,26 +106,35 @@ footer {
 
 <div class="container">
 
-  <div class="name">𝐁𝐧 𝐂𝐚𝐯𝐞</div>
+  <div class="name">Bn Cave</div>
 
   <div class="links">
 
-    <!-- GRUPO WHATSAPP -->
+    <!-- Grupo WhatsApp -->
     <a class="link" href="https://chat.whatsapp.com/K8kBRwONbhQ2W20W0FGoDN?mode=gi_t" target="_blank">
       <i class="fab fa-whatsapp"></i>
-      <span>Grupo WhatsApp<br>𓍢ִ໋🀦 𝒁𝑬𝑵𝑰𝑵 ✮ 𝑻𝒌𝒚 ˙˚</span>
+      <div class="text">
+        <div class="title">Grupo WhatsApp</div>
+        <div class="subtitle">𓍢ִ໋🀦 ZENIN ✮ Tky ˙˚</div>
+      </div>
     </a>
 
-    <!-- PRIVADO WHATSAPP -->
+    <!-- Private -->
     <a class="link" href="https://wa.me/557798073981" target="_blank">
       <i class="fab fa-whatsapp"></i>
-      <span>Private<br>Bn syze</span>
+      <div class="text">
+        <div class="title">Private</div>
+        <div class="subtitle">Bn syze</div>
+      </div>
     </a>
 
-    <!-- TIKTOK -->
-    <a class="link" href="https://www.tiktok.com/@bnstay3_?_r=1&_t=ZS-93P6RVymzSb" target="_blank">
+    <!-- TikTok -->
+    <a class="link" href="https://www.tiktok.com/@bnstay3_" target="_blank">
       <i class="fab fa-tiktok"></i>
-      <span>TikTok User<br>bnstay3_</span>
+      <div class="text">
+        <div class="title">TikTok User</div>
+        <div class="subtitle">bnstay3_</div>
+      </div>
     </a>
 
   </div>

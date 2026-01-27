@@ -2,9 +2,13 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Bn Cave</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<!-- Fonte premium -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Ícones -->
 <script src="https://kit.fontawesome.com/a2e0e6ad65.js" crossorigin="anonymous"></script>
 
 <style>
@@ -12,59 +16,68 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
   min-height: 100vh;
   background:
-    linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.95)),
-    url('bg.jpg') center / cover no-repeat;
+    linear-gradient(
+      rgba(0,0,0,0.75),
+      rgba(0,0,0,0.92)
+    ),
+    url("bg.jpg") center/cover no-repeat fixed;
   display: flex;
   justify-content: center;
   align-items: center;
   color: #fff;
 }
 
+/* Container */
 .container {
   width: 100%;
-  max-width: 460px;
-  padding: 50px 22px;
+  max-width: 520px;
+  padding: 60px 24px;
   text-align: center;
 }
 
-/* Nome do site */
+/* Título */
 .name {
-  font-size: 38px;
-  font-weight: 700;
-  letter-spacing: 4px;
-  margin-bottom: 45px;
-  text-shadow: 0 0 25px rgba(140,140,255,0.35);
+  font-size: 46px;
+  font-weight: 800;
+  letter-spacing: 5px;
+  margin-bottom: 55px;
+  text-shadow:
+    0 0 25px rgba(120,120,255,0.45),
+    0 0 50px rgba(120,120,255,0.25);
 }
 
 /* Links */
 .links {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 28px;
 }
 
+/* Card */
 .link {
   text-decoration: none;
-  background: rgba(10,10,16,0.95);
-  border-radius: 22px;
-  padding: 26px;
+  background: rgba(12,12,20,0.95);
+  border-radius: 26px;
+  padding: 30px;
   display: flex;
   align-items: center;
-  gap: 22px;
-  transition: 0.35s;
-  border: 1px solid rgba(255,255,255,0.05);
+  gap: 26px;
+  border: 1px solid rgba(255,255,255,0.06);
+  transition: all 0.35s ease;
+  backdrop-filter: blur(10px);
 }
 
+/* Ícone */
 .link i {
-  font-size: 34px;
-  color: #9fa8ff;
-  min-width: 36px;
+  font-size: 42px;
+  color: #8f95ff;
+  min-width: 46px;
 }
 
 /* Textos */
@@ -73,31 +86,33 @@ body {
 }
 
 .title {
-  font-size: 22px;
-  font-weight: 600;
+  font-size: 26px;
+  font-weight: 700;
   letter-spacing: 1px;
 }
 
 .subtitle {
-  font-size: 17px;
+  font-size: 18px;
   margin-top: 6px;
-  color: #b7baff;
+  color: #9fa4ff;
   letter-spacing: 1px;
 }
 
 /* Hover */
 .link:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 0 35px rgba(120,120,255,0.35);
-  border-color: rgba(120,120,255,0.6);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow:
+    0 0 40px rgba(120,120,255,0.45),
+    inset 0 0 20px rgba(120,120,255,0.15);
+  border-color: rgba(120,120,255,0.7);
 }
 
 /* Rodapé */
 footer {
-  margin-top: 45px;
+  margin-top: 55px;
   font-size: 12px;
   opacity: 0.25;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
 }
 </style>
 </head>

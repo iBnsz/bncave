@@ -1,102 +1,147 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Bn Cave</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bn Cave</title>
 
-  <!-- Fonte elegante -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/a2e0e6ad65.js" crossorigin="anonymous"></script>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-    }
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
 
-    body {
-      min-height: 100vh;
-      background:
-        linear-gradient(
-          rgba(0, 0, 0, 0.35),
-          rgba(0, 0, 0, 0.65)
-        ),
-        url("bg.jpg") no-repeat;
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: #ffffff;
-    }
+body {
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.85)),
+    url('bg.jpg') center / cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
 
-    .container {
-      width: 100%;
-      max-width: 420px;
-      padding: 20px;
-      text-align: center;
-    }
+.container {
+  width: 100%;
+  max-width: 380px;
+  padding: 40px 18px;
+  text-align: center;
+  z-index: 1;
+}
 
-    h1 {
-      font-size: 2.1rem;
-      font-weight: 700;
-      margin-bottom: 32px;
-      letter-spacing: 1px;
-    }
+/* Nome */
+.name {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-bottom: 32px;
+}
 
-    .card {
-      background: rgba(10, 12, 20, 0.85);
-      backdrop-filter: blur(10px);
-      border-radius: 18px;
-      padding: 22px 18px;
-      margin-bottom: 20px;
-      box-shadow: 0 0 28px rgba(0, 0, 0, 0.6);
-    }
+/* Lista */
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
 
-    .card h2 {
-      font-size: 1.25rem;
-      color: #2f46ff;
-      font-weight: 600;
-      margin-bottom: 10px;
-    }
+/* Card clicável */
+.link {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 20px;
+  background: rgba(15,15,22,0.92);
+  border-radius: 16px;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.06);
+  transition: 0.3s;
+  cursor: pointer;
+  pointer-events: auto;
+}
 
-    .card p {
-      font-size: 0.95rem;
-      color: #cfd6ff;
-      letter-spacing: 0.6px;
-    }
+.link i {
+  font-size: 22px;
+  color: #8f96ff;
+}
 
-    footer {
-      margin-top: 26px;
-      font-size: 0.75rem;
-      color: rgba(255, 255, 255, 0.35);
-    }
-  </style>
+/* Texto */
+.text {
+  text-align: left;
+}
+
+.title {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.subtitle {
+  font-size: 14px;
+  margin-top: 4px;
+  color: #b3b7ff;
+}
+
+/* Hover */
+.link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 18px rgba(120,120,255,0.3);
+}
+
+/* Rodapé */
+footer {
+  margin-top: 30px;
+  font-size: 11px;
+  opacity: 0.35;
+}
+</style>
 </head>
+
 <body>
 
-  <div class="container">
-    <h1>Bn Cave</h1>
+<div class="container">
 
-    <div class="card">
-      <h2>Grupo WhatsApp</h2>
-      <p>𓍢ִ໋🀦 𝒁𝑬𝑵𝑰𝑵 ✮ 𝑻𝒌𝒚 ˙˚</p>
-    </div>
+  <div class="name">Bn Cave</div>
 
-    <div class="card">
-      <h2>Private</h2>
-      <p>Bn. 么</p>
-    </div>
+  <div class="links">
 
-    <div class="card">
-      <h2>TikTok User</h2>
-      <p>bnstay3_</p>
-    </div>
+    <!-- Grupo WhatsApp -->
+    <a class="link" href="https://chat.whatsapp.com/K8kBRwONbhQ2W20W0FGoDN" target="_blank">
+      <i class="fab fa-whatsapp"></i>
+      <div class="text">
+        <div class="title">Grupo WhatsApp</div>
+        <div class="subtitle">𓍢ִ໋🀦 𝒁𝑬𝑵𝑰𝑵 ✮ 𝑻𝒌𝒚 ˙˚</div>
+      </div>
+    </a>
 
-    <footer>© Bn Cave</footer>
+    <!-- Private -->
+    <a class="link" href="https://wa.me/557798073981" target="_blank">
+      <i class="fab fa-whatsapp"></i>
+      <div class="text">
+        <div class="title">Private</div>
+        <div class="subtitle">Bn. 么</div>
+      </div>
+    </a>
+
+    <!-- TikTok -->
+    <a class="link" href="https://www.tiktok.com/@bnstay3_" target="_blank">
+      <i class="fab fa-tiktok"></i>
+      <div class="text">
+        <div class="title">TikTok User</div>
+        <div class="subtitle">bnstay3_</div>
+      </div>
+    </a>
+
   </div>
+
+  <footer>© Bn Cave</footer>
+
+</div>
 
 </body>
 </html>

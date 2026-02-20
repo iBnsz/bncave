@@ -5,99 +5,130 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Bn Cave</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <script src="https://kit.fontawesome.com/a2e0e6ad65.js" crossorigin="anonymous"></script>
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Inter', sans-serif;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Inter',sans-serif;
 }
 
-body {
-  min-height: 100vh;
+body{
+  min-height:100vh;
   background:
-    linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.85)),
-    url('bg.jpg') center / cover no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
+    radial-gradient(circle at 50% 30%, rgba(120,120,255,0.15), transparent 60%),
+    linear-gradient(180deg, rgba(0,0,0,0.85), rgba(0,0,0,0.98)),
+    url('bg.jpg') center/cover no-repeat;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  color:#fff;
 }
 
-.container {
-  width: 100%;
-  max-width: 380px;
-  padding: 40px 18px;
-  text-align: center;
-  z-index: 1;
+/* Container principal */
+.container{
+  width:100%;
+  max-width:420px;
+  padding:55px 25px;
+  text-align:center;
 }
 
-/* Nome */
-.name {
-  font-size: 30px;
-  font-weight: 700;
-  letter-spacing: 3px;
-  margin-bottom: 32px;
+/* Nome com efeito ghost glow */
+.name{
+  font-size:36px;
+  font-weight:800;
+  letter-spacing:4px;
+  margin-bottom:45px;
+  background:linear-gradient(90deg,#ffffff,#9fa8ff,#6f7cff);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  text-shadow:
+    0 0 15px rgba(120,120,255,0.4),
+    0 0 35px rgba(120,120,255,0.2);
 }
 
 /* Lista */
-.links {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
+.links{
+  display:flex;
+  flex-direction:column;
+  gap:22px;
 }
 
-/* Card clicável */
-.link {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  padding: 18px 20px;
-  background: rgba(15,15,22,0.92);
-  border-radius: 16px;
-  text-decoration: none;
-  color: #fff;
-  border: 1px solid rgba(255,255,255,0.06);
-  transition: 0.3s;
-  cursor: pointer;
-  pointer-events: auto;
+/* Card ghost premium */
+.link{
+  display:flex;
+  align-items:center;
+  gap:18px;
+  padding:22px;
+  border-radius:22px;
+  background:rgba(18,18,28,0.65);
+  backdrop-filter:blur(16px);
+  border:1px solid rgba(255,255,255,0.06);
+  text-decoration:none;
+  color:#fff;
+  transition:all .4s ease;
+  position:relative;
+  overflow:hidden;
 }
 
-.link i {
-  font-size: 22px;
-  color: #8f96ff;
+/* brilho lateral */
+.link::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:-100%;
+  width:100%;
+  height:100%;
+  background:linear-gradient(120deg,transparent,rgba(120,120,255,0.25),transparent);
+  transition:.6s;
+}
+
+.link:hover::before{
+  left:100%;
+}
+
+.link:hover{
+  transform:translateY(-6px);
+  box-shadow:
+    0 0 30px rgba(120,120,255,0.4),
+    0 0 70px rgba(120,120,255,0.15);
+  border-color:rgba(140,140,255,0.5);
+}
+
+.link i{
+  font-size:26px;
+  background:linear-gradient(45deg,#8f96ff,#cdd1ff);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
 }
 
 /* Texto */
-.text {
-  text-align: left;
+.text{
+  text-align:left;
 }
 
-.title {
-  font-size: 17px;
-  font-weight: 600;
+.title{
+  font-size:18px;
+  font-weight:600;
+  letter-spacing:1px;
 }
 
-.subtitle {
-  font-size: 14px;
-  margin-top: 4px;
-  color: #b3b7ff;
+.subtitle{
+  font-size:14px;
+  margin-top:6px;
+  color:#c4c8ff;
+  letter-spacing:.5px;
 }
 
-/* Hover */
-.link:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 0 18px rgba(120,120,255,0.3);
-}
-
-/* Rodapé */
-footer {
-  margin-top: 30px;
-  font-size: 11px;
-  opacity: 0.35;
+/* Footer */
+footer{
+  margin-top:50px;
+  font-size:12px;
+  opacity:.35;
+  letter-spacing:2px;
 }
 </style>
 </head>
@@ -106,49 +137,45 @@ footer {
 
 <div class="container">
 
-  <div class="name">Bn Cave</div>
+<div class="name">Bn Cave</div>
 
-  <div class="links">
+<div class="links">
 
-    <!-- Grupo WhatsApp -->
-    <a class="link" href="https://chat.whatsapp.com/DCojQs6esYL3vyYOTogodh?mode=gi_t" target="_blank">
-      <i class="fab fa-whatsapp"></i>
-      <div class="text">
-        <div class="title">Grupo WhatsApp</div>
-        <div class="subtitle">𓍢ִ໋🀦 𝒁𝑬𝑵𝑰𝑵 ✮ 𝑻𝒌𝒚 ˙˚</div>
-      </div>
-    </a>
-  
-  <!-- Grupo WhatsApp -->
-    <a class="link" href="https://chat.whatsapp.com/CkB6yAZy3dV0LUTWsliSE7?mode=gi_t" target="_blank">
-      <i class="fab fa-whatsapp"></i>
-      <div class="text">
-        <div class="title">Grupo WhatsApp</div>
-        <div class="subtitle">𝑻𝒌𝒚Ϟ 𝑮𝒂𝒎𝒆 𝒄𝒍𝒖𝒃</div>
-      </div>
-    </a>
+<a class="link" href="https://chat.whatsapp.com/D9zQyX7JDv7CkxBJgQNLhU?mode=gi_t" target="_blank">
+<i class="fab fa-whatsapp"></i>
+<div class="text">
+<div class="title">Grupo WhatsApp</div>
+<div class="subtitle">𓍢ִ໋🀦 𝒁𝑬𝑵𝑰𝑵 ✮ 𝑻𝒌𝒚 ˙˚</div>
+</div>
+</a>
 
-    <!-- Private -->
-    <a class="link" href="https://wa.me/557798073981" target="_blank">
-      <i class="fab fa-whatsapp"></i>
-      <div class="text">
-        <div class="title">Private</div>
-        <div class="subtitle">Bn. 么</div>
-      </div>
-    </a>
+<a class="link" href="https://chat.whatsapp.com/CkB6yAZy3dV0LUTWsliSE7?mode=gi_t" target="_blank">
+<i class="fab fa-whatsapp"></i>
+<div class="text">
+<div class="title">Grupo WhatsApp</div>
+<div class="subtitle">ׄ ७ ꯭֎ 𝐙𝐄𝐍𝐈𝐍 𝐂𝐋𝐔𝐁ᵎᵎ₊⊹</div>
+</div>
+</a>
 
-    <!-- TikTok -->
-    <a class="link" href="https://www.tiktok.com/@bnstay3_" target="_blank">
-      <i class="fab fa-tiktok"></i>
-      <div class="text">
-        <div class="title">TikTok User</div>
-        <div class="subtitle">bnstay3_</div>
-      </div>
-    </a>
+<a class="link" href="https://wa.me/557798073981" target="_blank">
+<i class="fab fa-whatsapp"></i>
+<div class="text">
+<div class="title">Private</div>
+<div class="subtitle">Bn. 么</div>
+</div>
+</a>
 
-  </div>
+<a class="link" href="https://www.tiktok.com/@bnstay3_" target="_blank">
+<i class="fab fa-tiktok"></i>
+<div class="text">
+<div class="title">TikTok User</div>
+<div class="subtitle">bnstay3_</div>
+</div>
+</a>
 
-  <footer>© Bn Cave</footer>
+</div>
+
+<footer>© Bn Cave</footer>
 
 </div>
 
